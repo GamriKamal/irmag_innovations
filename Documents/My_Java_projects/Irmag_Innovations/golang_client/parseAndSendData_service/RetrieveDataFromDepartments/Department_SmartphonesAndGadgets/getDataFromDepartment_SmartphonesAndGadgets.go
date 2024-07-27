@@ -1,0 +1,40 @@
+package Department_SmartphonesAndGadgets
+
+import (
+	"context"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_SmartphonesAndGadgets/Category_Accessories"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_SmartphonesAndGadgets/Category_CellPhones"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_SmartphonesAndGadgets/Category_Gadgets"
+)
+
+func GetDataFromDepartment_SmartphonesAndGadgets(ctx context.Context) {
+	//Category_Accessories
+	Category_Accessories.GetDataCategoryArmoredFilms(ctx)
+	Category_Accessories.GetDataCategoryProtectiveGlassesAndFilms(ctx)
+	Category_Accessories.GetDataCategoryHeadphonesForPhones(ctx)
+	Category_Accessories.GetDataCategoryWirelessHeadphonesAndHeadsets(ctx)
+	Category_Accessories.GetDataCategoryPortableSpeakers(ctx)
+	Category_Accessories.GetDataCategorySmartphoneCases(ctx)
+	Category_Accessories.GetDataCategoryEbookCases(ctx)
+	Category_Accessories.GetDataCategoryMountsStandsForSmartphones(ctx)
+	Category_Accessories.GetDataCategoryPowerBank(ctx)
+	Category_Accessories.GetDataCategoryMonopods(ctx)
+	Category_Accessories.GetDataCategoryChargers(ctx)
+	Category_Accessories.GetDataCategoryCablesAndAdapters(ctx)
+	Category_Accessories.GetDataCategoryMemoryCards(ctx)
+	Category_Accessories.GetDataCategoryStrapsForSmartWatchesAndFitnessBracelets(ctx)
+	Category_Accessories.GetDataCategoryHeadphoneCases(ctx)
+	Category_Accessories.GetDataCategoryRingLamps(ctx)
+	Category_Accessories.GetDataCategoryCleaningProducts(ctx)
+	Category_Accessories.GetDataCategoryOtherAccessories(ctx)
+
+	//Category_CellPhones
+	Category_CellPhones.GetDataCategorySmartphones(ctx)
+	Category_CellPhones.GetDataCategoryPushButtonPhones(ctx)
+
+	//Category_Gadgets
+	Category_Gadgets.GetDataCategorySmartClocks(ctx)
+	Category_Gadgets.GetDataCategoryFitnessBracelet(ctx)
+	Category_Gadgets.GetDataCategoryTablets(ctx)
+	Category_Gadgets.GetDataCategoryEBooks(ctx)
+}
