@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products in [[${categoryName}]]</title>
+    <link rel="stylesheet" th:href="@{/product-page.css}" type="text/css"/>
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+
+<div class="container">
+    <h1 th:text="${subcategoryName}">Subcategory Name</h1>
+
+    <div th:if="${#lists.isEmpty(productList)}">
+        <p>No products available in this category.</p>
+    </div>
+
+    <div th:if="${!#lists.isEmpty(productList)}">
+        <ul class="product-list">
+            <li th:each="product : ${productList}">
+                <a th:href="@{/product/{id_item}(id_item=${product.get('id_item')})}">
+                    <div class="product">
+                        <img th:src="${product.get('photos')[0]}" alt="Product Image">
+                        <h3 th:text="${product.get('title')}">Product Name</h3>
+                        <p th:if="${product.get('price') != null}" th:text="'Price: ' + ${product.get('price')}"></p>
+                        <p th:unless="${product.get('price') != null}">Товар закончился</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="pagination">
+        <a th:class="${currentPage == null || currentPage <= 1 ? 'disabled' : ''}"
+           th:href="@{'/categories/' + ${departmentName} + '/' + ${categoryName} + '/' + ${subcategoryName} + '?page=' + (${currentPage - 1}) + '&id_item=' + ${id_item}}"
+           th:if="${currentPage != null && currentPage > 1}">&laquo; Previous</a>
+
+        <span th:each="pageNumber : ${#numbers.sequence(1, totalPages)}">
+            <a th:class="${pageNumber == currentPage ? 'current' : ''}"
+               th:href="@{'/categories/' + ${departmentName} + '/' + ${categoryName} + '/' + ${subcategoryName} + '?page=' + ${pageNumber} + '&id_item=' + ${id_item}}"
+               th:text="${pageNumber}"></a>
+        </span>
+
+        <a th:class="${currentPage == null || currentPage >= totalPages ? 'disabled' : ''}"
+           th:href="@{'/categories/' + ${departmentName} + '/' + ${categoryName} + '/' + ${subcategoryName} + '?page=' + (${currentPage + 1}) + '&id_item=' + ${id_item}}"
+           th:if="${currentPage != null && currentPage < totalPages}">Next &raquo;</a>
+    </div>
+</div>
+
+<div th:replace="footer.html"></div>
+
+</body>
+</html>
