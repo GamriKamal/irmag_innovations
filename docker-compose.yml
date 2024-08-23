@@ -1,0 +1,119 @@
+version: '3.8'
+services:
+  apigateway:
+    build:
+      context: ./java_client/apigateway
+      dockerfile: Dockerfile
+    container_name: apigateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+    networks:
+      - irmag_innovations_network
+
+  eureka-server:
+    build:
+      context: ./java_client/eureka_server
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - irmag_innovations_network
+
+  product_service:
+    build:
+      context: ./java_client/product_service
+      dockerfile: Dockerfile
+    container_name: product_service
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      - eureka-server
+      - mongodb_java
+      - zookeeper
+      - kafka
+    networks:
+      - irmag_innovations_network
+
+  mongodb_java:
+    image: mongo:latest
+    container_name: mongodb_java
+    ports:
+      - "27018:27017"
+    volumes:
+      - /home/mr-irmag/Desktop/Irmag_Innovations/db_storage/mongodb_java_storage:/data/db
+    networks:
+      - irmag_innovations_network
+
+  mongodb_golang:
+    image: mongo:latest
+    container_name: mongodb_golang
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/mr-irmag/Desktop/Irmag_Innovations/db_storage/mongodb_golang_storage:/data/db
+    networks:
+      - irmag_innovations_network
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+    networks:
+      - irmag_innovations_network
+
+  kafka:
+    image: confluentinc/cp-kafka
+    ports:
+      - 29092:29092
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: INTERNAL://0.0.0.0:9092,OUTSIDE://0.0.0.0:9094
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,OUTSIDE://localhost:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+    networks:
+      - irmag_innovations_network
+
+  postgredb:
+    image: postgres:13
+    container_name: postgredb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=irmag
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=auth_db
+    volumes:
+      - /home/mr-irmag/Desktop/Irmag_Innovations/db_storage/postgredb_storage:/var/lib/postgresql/data
+    networks:
+      - irmag_innovations_network
+
+  golang_service:
+    build:
+      context: ./golang_client/parseAndSendData_service
+      dockerfile: Dockerfile
+    container_name: golang_service
+    ports:
+      - "9090:9090"
+    depends_on:
+      - eureka-server
+      - mongodb_golang
+      - zookeeper
+      - kafka
+    networks:
+      - irmag_innovations_network
+
+networks:
+  irmag_innovations_network:
+    driver: bridge

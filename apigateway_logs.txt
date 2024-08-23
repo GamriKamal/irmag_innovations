@@ -1,0 +1,373 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-07T19:17:14.520Z  INFO 1 --- [gateway] [           main] i.io.apigateway.ApigatewayApplication    : Starting ApigatewayApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/gateway.jar started by root in /)
+2024-08-07T19:17:14.522Z  INFO 1 --- [gateway] [           main] i.io.apigateway.ApigatewayApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T19:17:15.100Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayReactiveLoadBalancerClientAutoConfiguration#gatewayLoadBalancerClientFilter matched
+2024-08-07T19:17:15.102Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayReactiveLoadBalancerClientAutoConfiguration#loadBalancerServiceInstanceCookieFilter matched
+2024-08-07T19:17:15.109Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#routingFilter matched
+2024-08-07T19:17:15.110Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#nettyWriteResponseFilter matched
+2024-08-07T19:17:15.110Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#reactorNettyWebSocketClient matched
+2024-08-07T19:17:15.110Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#reactorNettyRequestUpgradeStrategy matched
+2024-08-07T19:17:15.128Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#adaptCachedBodyGlobalFilter matched
+2024-08-07T19:17:15.128Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeCachedBodyFilter matched
+2024-08-07T19:17:15.128Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#routeToRequestUrlFilter matched
+2024-08-07T19:17:15.128Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#forwardRoutingFilter matched
+2024-08-07T19:17:15.129Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#forwardPathFilter matched
+2024-08-07T19:17:15.129Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#webSocketService matched
+2024-08-07T19:17:15.129Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#websocketRoutingFilter matched
+2024-08-07T19:17:15.129Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#weightCalculatorWebFilter matched
+2024-08-07T19:17:15.129Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#afterRoutePredicateFactory matched
+2024-08-07T19:17:15.130Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#beforeRoutePredicateFactory matched
+2024-08-07T19:17:15.130Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#betweenRoutePredicateFactory matched
+2024-08-07T19:17:15.130Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#cookieRoutePredicateFactory matched
+2024-08-07T19:17:15.130Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#headerRoutePredicateFactory matched
+2024-08-07T19:17:15.130Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#hostRoutePredicateFactory matched
+2024-08-07T19:17:15.131Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#methodRoutePredicateFactory matched
+2024-08-07T19:17:15.131Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#pathRoutePredicateFactory matched
+2024-08-07T19:17:15.131Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#queryRoutePredicateFactory matched
+2024-08-07T19:17:15.131Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#readBodyPredicateFactory matched
+2024-08-07T19:17:15.131Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#remoteAddrRoutePredicateFactory matched
+2024-08-07T19:17:15.132Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#xForwardedRemoteAddrRoutePredicateFactory matched
+2024-08-07T19:17:15.132Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#weightRoutePredicateFactory matched
+2024-08-07T19:17:15.132Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#cloudFoundryRouteServiceRoutePredicateFactory matched
+2024-08-07T19:17:15.133Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addRequestHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.133Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addRequestHeadersIfNotPresentGatewayFilterFactory matched
+2024-08-07T19:17:15.133Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#mapRequestHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.133Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addRequestParameterGatewayFilterFactory matched
+2024-08-07T19:17:15.134Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addResponseHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.134Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#modifyRequestBodyGatewayFilterFactory matched
+2024-08-07T19:17:15.134Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#dedupeResponseHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.134Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#modifyResponseBodyGatewayFilterFactory matched
+2024-08-07T19:17:15.134Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#cacheRequestBodyGatewayFilterFactory matched
+2024-08-07T19:17:15.134Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#prefixPathGatewayFilterFactory matched
+2024-08-07T19:17:15.135Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#preserveHostHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.135Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#redirectToGatewayFilterFactory matched
+2024-08-07T19:17:15.135Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeJsonAttributesResponseBodyGatewayFilterFactory matched
+2024-08-07T19:17:15.135Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeRequestHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.136Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeRequestParameterGatewayFilterFactory matched
+2024-08-07T19:17:15.136Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeResponseHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.142Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewritePathGatewayFilterFactory matched
+2024-08-07T19:17:15.142Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#retryGatewayFilterFactory matched
+2024-08-07T19:17:15.143Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setPathGatewayFilterFactory matched
+2024-08-07T19:17:15.143Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#secureHeadersGatewayFilterFactory matched
+2024-08-07T19:17:15.143Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setRequestHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.143Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setRequestHostHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.143Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setResponseHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.143Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewriteResponseHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.144Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewriteLocationResponseHeaderGatewayFilterFactory matched
+2024-08-07T19:17:15.144Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setStatusGatewayFilterFactory matched
+2024-08-07T19:17:15.144Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#saveSessionGatewayFilterFactory matched
+2024-08-07T19:17:15.144Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#stripPrefixGatewayFilterFactory matched
+2024-08-07T19:17:15.144Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#requestHeaderToRequestUriGatewayFilterFactory matched
+2024-08-07T19:17:15.145Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#requestSizeGatewayFilterFactory matched
+2024-08-07T19:17:15.145Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#requestHeaderSizeGatewayFilterFactory matched
+2024-08-07T19:17:15.145Z TRACE 1 --- [gateway] [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewriteRequestParameterGatewayFilterFactory matched
+2024-08-07T19:17:15.294Z  INFO 1 --- [gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2e5ba26c-f1e9-3095-936a-55423d304573
+2024-08-07T19:17:15.337Z  WARN 1 --- [gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-07T19:17:15.339Z  WARN 1 --- [gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-08-07T19:17:15.339Z  WARN 1 --- [gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-07T19:17:15.340Z  WARN 1 --- [gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-08-07T19:17:15.340Z  WARN 1 --- [gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-08-07T19:17:15.704Z DEBUG 1 --- [gateway] [           main] o.s.c.gateway.config.GatewayProperties   : Routes supplied from Gateway Properties: [RouteDefinition{id='PRODUCT_SERVICE', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/categories/**}}, PredicateDefinition{name='Path', args={_genkey_0=/product/{id_item}}}, PredicateDefinition{name='Path', args={_genkey_0=/search}}, PredicateDefinition{name='Path', args={_genkey_0=/privacy}}, PredicateDefinition{name='Path', args={_genkey_0=/about}}, PredicateDefinition{name='Path', args={_genkey_0=/terms}}, PredicateDefinition{name='Path', args={_genkey_0=/contacts}}, PredicateDefinition{name='Path', args={_genkey_0=/send-message}}], filters=[FilterDefinition{name='StripPrefix', args={_genkey_0=1}}], uri=lb://PRODUCT_SERVICE, order=0, metadata={}}, RouteDefinition{id='GOLANG_PARSER_SERVICE', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/go_client/**}}], filters=[FilterDefinition{name='StripPrefix', args={_genkey_0=1}}], uri=lb://GOLANG_PARSER_SERVICE, order=0, metadata={}}]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2024-08-07T19:17:15.760Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-08-07T19:17:15.761Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2024-08-07T19:17:15.761Z  INFO 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-08-07T19:17:15.790Z DEBUG 1 --- [gateway] [           main] s.w.r.r.m.a.RequestMappingHandlerMapping : 0 mappings in 'requestMappingHandlerMapping'
+2024-08-07T19:17:15.792Z TRACE 1 --- [gateway] [           main] o.s.w.r.f.s.s.RouterFunctionMapping      : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-08-07T19:17:15.799Z TRACE 1 --- [gateway] [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceWebHandler [classpath [META-INF/resources/webjars/]]
+2024-08-07T19:17:15.799Z TRACE 1 --- [gateway] [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:17:15.799Z DEBUG 1 --- [gateway] [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-07T19:17:15.820Z DEBUG 1 --- [gateway] [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2024-08-07T19:17:15.834Z DEBUG 1 --- [gateway] [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-07T19:17:15.900Z  INFO 1 --- [gateway] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-08-07T19:17:15.918Z  WARN 1 --- [gateway] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-07T19:17:15.938Z  INFO 1 --- [gateway] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-08-07T19:17:15.953Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-08-07T19:17:15.956Z  INFO 1 --- [gateway] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-08-07T19:17:15.961Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-08-07T19:17:16.080Z DEBUG 1 --- [gateway] [           main] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/
+2024-08-07T19:17:16.153Z DEBUG 1 --- [gateway] [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:17:16.182Z DEBUG 1 --- [gateway] [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:17:16.184Z DEBUG 1 --- [gateway] [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:17:16.199Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-08-07T19:17:16.200Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-08-07T19:17:16.201Z  INFO 1 --- [gateway] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-08-07T19:17:16.201Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1723058236201 with initial instances count: 1
+2024-08-07T19:17:16.203Z  INFO 1 --- [gateway] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application GATEWAY with eureka with status UP
+2024-08-07T19:17:16.203Z  INFO 1 --- [gateway] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1723058236203, current=UP, previous=STARTING]
+2024-08-07T19:17:16.204Z  INFO 1 --- [gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY/0a0405bb3557:gateway:8080: registering service...
+2024-08-07T19:17:16.206Z DEBUG 1 --- [gateway] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://eureka-server:8761/eureka/apps/GATEWAY
+2024-08-07T19:17:16.207Z DEBUG 1 --- [gateway] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:17:16.215Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:17:16.219Z DEBUG 1 --- [gateway] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = 0a0405bb3557:gateway:8080, appName = GATEWAY, hostName = 172.19.0.9, status = UP, ipAddr = 172.19.0.9, port = 8080, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@8710c6f] as "application/json"
+2024-08-07T19:17:16.226Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:17:16.227Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:17:16.227Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:17:16.227Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:17:16.228Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:17:16.228Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:17:16.229Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:17:16.229Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:17:16.233Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:17:16.233Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:17:16.234Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:17:16.234Z DEBUG 1 --- [gateway] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2024-08-07T19:17:16.234Z  INFO 1 --- [gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY/0a0405bb3557:gateway:8080 - registration status: 204
+2024-08-07T19:17:16.234Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:17:16.281Z  INFO 1 --- [gateway] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+2024-08-07T19:17:16.282Z  INFO 1 --- [gateway] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2024-08-07T19:17:16.288Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:17:16.289Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:17:16.289Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:17:16.290Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:17:16.290Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:17:16.291Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:17:16.291Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:17:16.292Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:17:16.293Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:17:16.293Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:17:16.293Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:17:16.294Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:17:16.294Z DEBUG 1 --- [gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:17:16.298Z  INFO 1 --- [gateway] [           main] i.io.apigateway.ApigatewayApplication    : Started ApigatewayApplication in 2.139 seconds (process running for 2.465)
+2024-08-07T19:17:28.045Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-1] HTTP GET "/categories", headers={masked}
+2024-08-07T19:17:28.048Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2024-08-07T19:17:28.054Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "/categories/**" matches against value "/categories"
+2024-08-07T19:17:28.054Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/product/{id_item}]" does not match against value "/categories"
+2024-08-07T19:17:28.055Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/go_client/**]" does not match against value "/categories"
+2024-08-07T19:17:28.055Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.RoutePredicateHandlerMapping   : No RouteDefinition found for [Exchange: GET http://localhost:8080/categories]
+2024-08-07T19:17:28.056Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [40dfc4f6-1] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:17:28.058Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [40dfc4f6-1] Resource not found
+2024-08-07T19:17:28.065Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.r.function.server.RouterFunctions  : [40dfc4f6-1] Matched org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler$$Lambda$1022/0x0000000801267510@49eb0eaf
+2024-08-07T19:17:28.077Z DEBUG 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-1] Resolved [NoResourceFoundException: 404 NOT_FOUND "No static resource categories."] for HTTP GET /categories
+2024-08-07T19:17:28.081Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-1] Writing "<html><body><h1>Whitelabel Error Page</h1><p>This application has no configured error view, so you are seeing this as a fallback.</p><div id='created'>Wed Aug 07 19:17:28 UTC 2024</div><div>[40dfc4f6-1] There was an unexpected error (type=Not Found, status=404).</div></body></html>"
+2024-08-07T19:17:28.088Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-1] Completed 404 NOT_FOUND, headers={masked}
+2024-08-07T19:17:28.089Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-1, L:/172.19.0.9:8080 - R:/172.19.0.1:44418] Handling completed
+2024-08-07T19:17:28.105Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-2] HTTP GET "/favicon.ico", headers={masked}
+2024-08-07T19:17:28.105Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2024-08-07T19:17:28.105Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/categories/**]" does not match against value "/favicon.ico"
+2024-08-07T19:17:28.105Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/go_client/**]" does not match against value "/favicon.ico"
+2024-08-07T19:17:28.105Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.RoutePredicateHandlerMapping   : No RouteDefinition found for [Exchange: GET http://localhost:8080/favicon.ico]
+2024-08-07T19:17:28.106Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [40dfc4f6-2] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:17:28.106Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [40dfc4f6-2] Resource not found
+2024-08-07T19:17:28.107Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.r.function.server.RouterFunctions  : [40dfc4f6-2] Matched org.springframework.web.reactive.function.server.RequestPredicates$$Lambda$1024/0x0000000801262760@3f051106
+2024-08-07T19:17:28.107Z DEBUG 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-2] Resolved [NoResourceFoundException: 404 NOT_FOUND "No static resource favicon.ico."] for HTTP GET /favicon.ico
+2024-08-07T19:17:28.109Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-2] Encoding [{timestamp=Wed Aug 07 19:17:28 UTC 2024, path=/favicon.ico, status=404, error=Not Found, requestId=40dfc4f6-2}]
+2024-08-07T19:17:28.111Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-2] Completed 404 NOT_FOUND, headers={masked}
+2024-08-07T19:17:28.111Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-2, L:/172.19.0.9:8080 - R:/172.19.0.1:44418] Handling completed
+2024-08-07T19:17:46.200Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:17:46.201Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:17:46.203Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:17:46.205Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:17:46.205Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:17:46.207Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:17:46.208Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:17:46.209Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:17:46.209Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:17:46.209Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:17:46.210Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:17:46.210Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:17:46.210Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:17:46.210Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:17:46.211Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:17:46.211Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:17:46.211Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:17:46.212Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:17:46.212Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:17:46.214Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:17:53.256Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-3] HTTP GET "/categories", headers={masked}
+2024-08-07T19:17:53.256Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2024-08-07T19:17:53.257Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "/categories/**" matches against value "/categories"
+2024-08-07T19:17:53.257Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/product/{id_item}]" does not match against value "/categories"
+2024-08-07T19:17:53.257Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/go_client/**]" does not match against value "/categories"
+2024-08-07T19:17:53.257Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.RoutePredicateHandlerMapping   : No RouteDefinition found for [Exchange: GET http://localhost:8080/categories]
+2024-08-07T19:17:53.257Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [40dfc4f6-3] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:17:53.257Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [40dfc4f6-3] Resource not found
+2024-08-07T19:17:53.258Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.r.function.server.RouterFunctions  : [40dfc4f6-3] Matched org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler$$Lambda$1022/0x0000000801267510@49eb0eaf
+2024-08-07T19:17:53.260Z DEBUG 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-3] Resolved [NoResourceFoundException: 404 NOT_FOUND "No static resource categories."] for HTTP GET /categories
+2024-08-07T19:17:53.260Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-3] Writing "<html><body><h1>Whitelabel Error Page</h1><p>This application has no configured error view, so you are seeing this as a fallback.</p><div id='created'>Wed Aug 07 19:17:53 UTC 2024</div><div>[40dfc4f6-3] There was an unexpected error (type=Not Found, status=404).</div></body></html>"
+2024-08-07T19:17:53.261Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-3] Completed 404 NOT_FOUND, headers={masked}
+2024-08-07T19:17:53.261Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-3, L:/172.19.0.9:8080 - R:/172.19.0.1:44418] Handling completed
+2024-08-07T19:18:16.213Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:18:16.213Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:18:16.214Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:18:16.215Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:18:16.216Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:18:16.216Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:18:16.218Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:18:16.218Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:18:16.219Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:18:16.219Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:18:16.220Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:18:16.220Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:18:16.220Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:18:16.221Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:18:16.221Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:18:16.222Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:18:16.222Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:18:16.222Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:18:16.223Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:18:16.223Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:18:33.220Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-4] HTTP GET "/", headers={masked}
+2024-08-07T19:18:33.220Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2024-08-07T19:18:33.220Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/categories/**]" does not match against value "/"
+2024-08-07T19:18:33.220Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/go_client/**]" does not match against value "/"
+2024-08-07T19:18:33.220Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.RoutePredicateHandlerMapping   : No RouteDefinition found for [Exchange: GET http://localhost:8080/]
+2024-08-07T19:18:33.221Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [40dfc4f6-4] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:18:33.221Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [40dfc4f6-4] Resource not found
+2024-08-07T19:18:33.221Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.r.function.server.RouterFunctions  : [40dfc4f6-4] Matched org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler$$Lambda$1022/0x0000000801267510@49eb0eaf
+2024-08-07T19:18:33.223Z DEBUG 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-4] Resolved [NoResourceFoundException: 404 NOT_FOUND "No static resource ."] for HTTP GET /
+2024-08-07T19:18:33.223Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-4] Writing "<html><body><h1>Whitelabel Error Page</h1><p>This application has no configured error view, so you are seeing this as a fallback.</p><div id='created'>Wed Aug 07 19:18:33 UTC 2024</div><div>[40dfc4f6-4] There was an unexpected error (type=Not Found, status=404).</div></body></html>"
+2024-08-07T19:18:33.224Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-4] Completed 404 NOT_FOUND, headers={masked}
+2024-08-07T19:18:33.224Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-4, L:/172.19.0.9:8080 - R:/172.19.0.1:44418] Handling completed
+2024-08-07T19:18:44.419Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-5] HTTP GET "/categories", headers={masked}
+2024-08-07T19:18:44.419Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2024-08-07T19:18:44.419Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "/categories/**" matches against value "/categories"
+2024-08-07T19:18:44.419Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/product/{id_item}]" does not match against value "/categories"
+2024-08-07T19:18:44.419Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/go_client/**]" does not match against value "/categories"
+2024-08-07T19:18:44.419Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.RoutePredicateHandlerMapping   : No RouteDefinition found for [Exchange: GET http://localhost:8080/categories]
+2024-08-07T19:18:44.419Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [40dfc4f6-5] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:18:44.420Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [40dfc4f6-5] Resource not found
+2024-08-07T19:18:44.420Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.r.function.server.RouterFunctions  : [40dfc4f6-5] Matched org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler$$Lambda$1022/0x0000000801267510@49eb0eaf
+2024-08-07T19:18:44.422Z DEBUG 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-5] Resolved [NoResourceFoundException: 404 NOT_FOUND "No static resource categories."] for HTTP GET /categories
+2024-08-07T19:18:44.422Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-5] Writing "<html><body><h1>Whitelabel Error Page</h1><p>This application has no configured error view, so you are seeing this as a fallback.</p><div id='created'>Wed Aug 07 19:18:44 UTC 2024</div><div>[40dfc4f6-5] There was an unexpected error (type=Not Found, status=404).</div></body></html>"
+2024-08-07T19:18:44.423Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-5] Completed 404 NOT_FOUND, headers={masked}
+2024-08-07T19:18:44.423Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-5, L:/172.19.0.9:8080 - R:/172.19.0.1:44418] Handling completed
+2024-08-07T19:18:46.218Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:18:46.219Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:18:46.222Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:18:46.224Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:18:46.224Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:18:46.227Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:18:46.227Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:18:46.228Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:18:46.229Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:18:46.230Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:18:46.230Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:18:46.230Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:18:46.231Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:18:46.231Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:18:46.231Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:18:46.231Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:18:46.232Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:18:46.232Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:18:46.232Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:18:46.232Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:18:51.620Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-6] HTTP GET "/categories", headers={masked}
+2024-08-07T19:18:51.620Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2024-08-07T19:18:51.620Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "/categories/**" matches against value "/categories"
+2024-08-07T19:18:51.620Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/product/{id_item}]" does not match against value "/categories"
+2024-08-07T19:18:51.620Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.p.PathRoutePredicateFactory    : Pattern "[/go_client/**]" does not match against value "/categories"
+2024-08-07T19:18:51.620Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.c.g.h.RoutePredicateHandlerMapping   : No RouteDefinition found for [Exchange: GET http://localhost:8080/categories]
+2024-08-07T19:18:51.621Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [40dfc4f6-6] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2024-08-07T19:18:51.621Z DEBUG 1 --- [gateway] [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [40dfc4f6-6] Resource not found
+2024-08-07T19:18:51.622Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.r.function.server.RouterFunctions  : [40dfc4f6-6] Matched org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler$$Lambda$1022/0x0000000801267510@49eb0eaf
+2024-08-07T19:18:51.623Z DEBUG 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-6] Resolved [NoResourceFoundException: 404 NOT_FOUND "No static resource categories."] for HTTP GET /categories
+2024-08-07T19:18:51.623Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-6] Writing "<html><body><h1>Whitelabel Error Page</h1><p>This application has no configured error view, so you are seeing this as a fallback.</p><div id='created'>Wed Aug 07 19:18:51 UTC 2024</div><div>[40dfc4f6-6] There was an unexpected error (type=Not Found, status=404).</div></body></html>"
+2024-08-07T19:18:51.624Z TRACE 1 --- [gateway] [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [40dfc4f6-6] Completed 404 NOT_FOUND, headers={masked}
+2024-08-07T19:18:51.624Z TRACE 1 --- [gateway] [or-http-epoll-2] org.springframework.web.HttpLogging      : [40dfc4f6-6, L:/172.19.0.9:8080 - R:/172.19.0.1:44418] Handling completed
+2024-08-07T19:19:16.223Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:19:16.223Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:19:16.227Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:19:16.233Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:19:16.233Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:19:16.236Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:19:16.236Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:19:16.237Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:19:16.238Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:19:16.238Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:19:16.239Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:19:16.239Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:19:16.239Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:19:16.240Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:19:16.240Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:19:16.240Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:19:16.241Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:19:16.241Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:19:16.241Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:19:16.242Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:19:46.227Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:19:46.228Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:19:46.231Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:19:46.242Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:19:46.242Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:19:46.245Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:19:46.245Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:19:46.247Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:19:46.248Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:19:46.248Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:19:46.248Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:19:46.248Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:19:46.249Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:19:46.249Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:19:46.249Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:19:46.250Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:19:46.250Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:19:46.250Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:19:46.250Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:19:46.250Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:20:16.231Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:20:16.232Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:20:16.235Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:20:16.251Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:20:16.251Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:20:16.254Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:20:16.254Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:20:16.255Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:20:16.256Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:20:16.256Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:20:16.256Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:20:16.257Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:20:16.257Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:20:16.257Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:20:16.257Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:20:16.258Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:20:16.258Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:20:16.258Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:20:16.258Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:20:16.259Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
+2024-08-07T19:20:46.235Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://eureka-server:8761/eureka/apps/GATEWAY/0a0405bb3557:gateway:8080?status=UP&lastDirtyTimestamp=1723058236203
+2024-08-07T19:20:46.236Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:20:46.239Z DEBUG 1 --- [gateway] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:20:46.260Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://eureka-server:8761/eureka/apps/delta
+2024-08-07T19:20:46.260Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-08-07T19:20:46.263Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2024-08-07T19:20:46.263Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2024-08-07T19:20:46.264Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/categories/**} to Path
+2024-08-07T19:20:46.265Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/product/{id_item}} to Path
+2024-08-07T19:20:46.265Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/search} to Path
+2024-08-07T19:20:46.265Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/privacy} to Path
+2024-08-07T19:20:46.266Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/about} to Path
+2024-08-07T19:20:46.266Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/terms} to Path
+2024-08-07T19:20:46.266Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/contacts} to Path
+2024-08-07T19:20:46.267Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying {_genkey_0=/send-message} to Path
+2024-08-07T19:20:46.267Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition PRODUCT_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:20:46.267Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: PRODUCT_SERVICE
+2024-08-07T19:20:46.267Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying {_genkey_0=/go_client/**} to Path
+2024-08-07T19:20:46.267Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition GOLANG_PARSER_SERVICE applying filter {_genkey_0=1} to StripPrefix
+2024-08-07T19:20:46.268Z DEBUG 1 --- [gateway] [reshExecutor-%d] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: GOLANG_PARSER_SERVICE
