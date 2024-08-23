@@ -1,0 +1,35 @@
+package Department_ProductsForGamers
+
+import (
+	"context"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_ProductsForGamers/Category_Components"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_ProductsForGamers/Category_Furniture"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_ProductsForGamers/Category_LaptopsPCConsoles"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_ProductsForGamers/Category_Peripherals"
+)
+
+func GetDataFromDepartment_ProductsForGamers(ctx context.Context) {
+	//Category_Components
+	Category_Components.GetDataCategoryGamingMotherboards(ctx)
+	Category_Components.GetDataCategoryGamingRAM(ctx)
+	Category_Components.GetDataCategoryGamingGPUs(ctx)
+	Category_Components.GetDataCategoryGamingSSD(ctx)
+	Category_Components.GetDataCategoryGamingPowerSupplies(ctx)
+
+	//Category_Furniture
+	Category_Furniture.GetDataCategoryGamingChairs(ctx)
+	Category_Furniture.GetDataCategoryGamingDesks(ctx)
+
+	//Category_LaptopsPCConsoles
+	Category_LaptopsPCConsoles.GetDataCategoryGamingLaptops(ctx)
+	Category_LaptopsPCConsoles.GetDataCategoryGamingPCs(ctx)
+
+	//Category_Peripherals
+	Category_Peripherals.GetDataCategoryGamingMice(ctx)
+	Category_Peripherals.GetDataCategoryGamingMousePads(ctx)
+	Category_Peripherals.GetDataCategoryGamingKeyboards(ctx)
+	Category_Peripherals.GetDataCategoryGamingHeadsets(ctx)
+	Category_Peripherals.GetDataCategoryGamingControllers(ctx)
+	Category_Peripherals.GetDataCategoryStreamingControllers(ctx)
+	Category_Peripherals.GetDataCategoryGamingMonitors(ctx)
+}

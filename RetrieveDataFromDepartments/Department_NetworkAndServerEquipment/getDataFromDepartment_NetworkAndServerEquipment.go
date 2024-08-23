@@ -1,0 +1,32 @@
+package Department_NetworkAndServerEquipment
+
+import (
+	"context"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_NetworkAndServerEquipment/Category_InstallationEquipment"
+	Category_NetworkingEquipment "parseAndSendData_service/RetrieveDataFromDepartments/Department_NetworkAndServerEquipment/Category_NetworkEquipment"
+	"parseAndSendData_service/RetrieveDataFromDepartments/Department_NetworkAndServerEquipment/Category_ServerEquipment"
+)
+
+func GetDataFromDepartment_NetworkAndServerEquipment(ctx context.Context) {
+	//Category_InstallationEquipment
+	Category_InstallationEquipment.GetDataCategoryCablesConnectors(ctx)
+	Category_InstallationEquipment.GetDataCategoryCableChannelsAndAccessories(ctx)
+	Category_InstallationEquipment.GetDataCategoryTools(ctx)
+
+	//Category_NetworkingEquipment
+	Category_NetworkingEquipment.GetDataCategoryRoutersAndModems(ctx)
+	Category_NetworkingEquipment.GetDataCategoryNetworkCardsAndAdapters(ctx)
+	Category_NetworkingEquipment.GetDataCategoryAccessPoints(ctx)
+	Category_NetworkingEquipment.GetDataCategorySwitches(ctx)
+	Category_NetworkingEquipment.GetDataCategoryAntennasAndSignalAmplifiers(ctx)
+	Category_NetworkingEquipment.GetDataCategoryPowerlineAdapters(ctx)
+	Category_NetworkingEquipment.GetDataCategoryNetworkStorages(ctx)
+	Category_NetworkingEquipment.GetDataCategoryMediaConverters(ctx)
+	Category_NetworkingEquipment.GetDataCategoryOtherEquipment(ctx)
+
+	//Category_ServerEquipment
+	Category_ServerEquipment.GetDataCategoryServers(ctx)
+	Category_ServerEquipment.GetDataCategoryServerComponents(ctx)
+	Category_ServerEquipment.GetDataCategoryServerCabinets(ctx)
+	Category_ServerEquipment.GetDataCategoryCabinetComponents(ctx)
+}
