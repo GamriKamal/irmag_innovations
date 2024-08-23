@@ -1,6 +1,6 @@
 # Irmag Innovations Repository
 
-This repository contains various services and tools developed by Irmag Innovations. It is structured into three primary branches, each serving a specific purpose within the project.
+This repository contains the codebase for an online store developed by me. The project is structured into three primary branches, each serving a specific purpose within the system.
 
 ## Branches Overview
 
