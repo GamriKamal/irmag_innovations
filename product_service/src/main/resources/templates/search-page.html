@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Irmag Innovations | Департаменты</title>
+    <link rel="stylesheet" th:href="@{/category.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/navbar.css}" type="text/css">
+</head>
+<body>
+<div th:replace="navbar.html :: navbar(${searchInput})"></div>
+<main>
+    <div class="container-wrapper" th:if="${resultList != null && resultList.size() > 0}">
+        <div class="container" th:each="product : ${resultList}">
+            <a th:href="@{/product/{id_item}(id_item=${product.get('id_item')})}">
+                <div class="product">
+                    <img th:src="${product.get('photos')}" alt="Product Image">
+                    <h3 th:text="${product.get('title')}">Product Name</h3>
+                    <p th:if="${product.get('price') != null}" th:text="'Price: $' + ${product.get('price')}"></p>
+                    <p th:unless="${product.get('price') != null}">Товар закончился</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="no-results" th:unless="${resultList != null && resultList.size() > 0}">
+        <p th:text="'На данный момент, товаров по запросу \'' + ${searchInput} + '\' нету'"></p>
+    </div>
+</main>
+
+<div th:replace="footer.html"></div>
+
+</body>
+</html>

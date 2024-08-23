@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  instance:
+    prefer-ip-address: true
+  server:
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: self, gateway, beans, health
+    enabled-by-default: true
+    gateway:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always

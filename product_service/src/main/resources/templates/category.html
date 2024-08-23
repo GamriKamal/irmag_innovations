@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Irmag Innovations | Департаменты</title>
+    <link rel="stylesheet" th:href="@{/category.css}" type="text/css">
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+<main>
+    <div class="container-wrapper" th:if="${department.getCategories() != null}">
+        <div class="container" th:each="category : ${department.getCategories()}">
+            <img alt="Category Image" th:src="${category.getImage()}"/>
+            <h1 th:text="${category.getName()}"></h1>
+            <form method="get"
+                  th:action="@{/categories/{departmentName}/{categoryName}(departmentName=${department.getName()}, categoryName=${category.getName()})}">
+                <button class="button" th:text="${category.getName()}" type="submit"></button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<div th:replace="footer.html"></div>
+
+</body>
+</html>

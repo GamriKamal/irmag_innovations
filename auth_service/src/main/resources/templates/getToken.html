@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Example</title>
+    <script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-token-with-polyfills-latest.js"></script>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var currentPageUrl = window.location.href;
+        var xhr = new XMLHttpRequest();
+
+        console.log(currentPageUrl);
+
+        xhr.open("POST", "/auth/receiveToken");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        var data = JSON.stringify({ url: currentPageUrl });
+        xhr.send(data);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log("Данные успешно отправлены на сервер");
+                    var response = JSON.parse(xhr.responseText);
+                    var token = response.token;
+
+                    if (token) {
+                        window.location.href = "/auth/sign-in";
+                    } else {
+                        console.error("Токен не получен");
+                    }
+                } else {
+                    console.error("Ошибка при отправке данных: " + xhr.status);
+                }
+            }
+        };
+    }
+</script>
+</body>
+</html>

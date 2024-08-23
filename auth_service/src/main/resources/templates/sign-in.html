@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, shrink-to-fit=no, viewport-fit=cover'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Sign In</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar .logo {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .nav-links {
+      float: right;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar .nav-links li {
+      float: left;
+    }
+
+    .navbar .nav-links li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links li a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+      margin: 50px auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .social-signin {
+      margin-top: 20px;
+    }
+
+    .yandex-btn {
+      background: #ffcc00;
+      color: #000;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .yandex-btn:hover {
+      background: #e6b800;
+    }
+
+    .yandex-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div th:replace="navbar.html"></div>
+
+<div class="container">
+  <h2>Sign In</h2>
+  <form id="signInForm" action="/auth/sign-in" method="POST" enctype="application/x-www-form-urlencoded">
+    <label for="username">Email:</label>
+    <input id="username" name="username" type="username">
+
+    <label for="password">Password:</label>
+    <input id="password" name="password" required type="password">
+
+    <button type="submit">Sign In</button>
+  </form>
+  <div class="social-signin">
+    <button class="yandex-btn" onclick="signInWithYandex()">
+      <svg height="24px" width="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path style="fill:#D7143A;" d="M363.493,0h-72.744C217.05,0,142.684,54.422,142.684,176.006c0,62.978,26.691,112.027,75.619,139.922
+          l-89.552,162.091c-4.246,7.666-4.357,16.354-0.298,23.24c3.963,6.725,11.21,10.741,19.378,10.741h45.301
+          c10.291,0,18.315-4.974,22.163-13.688L299.26,334.08h6.128v157.451c0,11.096,9.363,20.469,20.446,20.469h39.574
+          c12.429,0,21.106-8.678,21.106-21.104V22.403C386.516,9.213,377.05,0,363.493,0z M305.388,261.126h-10.81
+          c-41.915,0-66.938-34.214-66.938-91.523c0-71.259,31.61-96.648,61.194-96.648h16.554V261.126z"/>
+      </svg>
+      Sign in with Yandex
+    </button>
+  </div>
+  <p>Don't have an account? <a href="/auth/sign-up">Sign Up</a></p>
+</div>
+<div th:replace="footer.html"></div>
+
+<script>
+  function signInWithYandex() {
+    const yandexClientId = "e433c3b109d843cf99aee678afa66710";
+    const yandexAuthUrl = `https://oauth.yandex.ru/authorize?response_type=token&client_id=${yandexClientId}`;
+    window.location.href = yandexAuthUrl;
+  }
+
+  window.onload = function () {
+    window.YaAuthSuggest.init({
+              client_id: 'e433c3b109d843cf99aee678afa66710',
+              response_type: 'token',
+              redirect_uri: 'http://localhost:8089/auth/getToken'
+            },
+            'http://localhost:8089', {
+              view: 'button',
+              parentId: 'container',
+              buttonView: 'main',
+              buttonTheme: 'light',
+              buttonSize: 'm',
+              buttonBorderRadius: 0
+            }
+    )
+            .then(function (result) {
+              return result.handler()
+            })
+            .then(function (data) {
+              console.log('Сообщение с токеном: ', data);
+              document.body.innerHTML += `Сообщение с токеном: ${JSON.stringify(data)}`;
+            })
+            .catch(function (error) {
+              console.log('Что-то пошло не так: ', error);
+              document.body.innerHTML += `Что-то пошло не так: ${JSON.stringify(error)}`;
+            });
+  };
+</script>
+
+</body>
+
+</html>

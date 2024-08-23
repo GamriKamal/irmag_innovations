@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/footer.css}" type="text/css">
+</head>
+<style>
+    footer {
+        background-color: #333;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+    }
+
+    footer ul li {
+        display: inline;
+    }
+
+    footer ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+        color: #cccccc;
+    }
+</style>
+<body>
+<footer th:fragment="footer">
+    <p>&copy; 2024 Irmag Innovations</p>
+    <ul>
+        <li><a href="/contacts">Контакты</a></li>
+        <li><a href="/privacy">Политика конфиденциальности</a></li>
+        <li><a href="/terms">Условия использования</a></li>
+    </ul>
+</footer>
+</body>
+</html>
