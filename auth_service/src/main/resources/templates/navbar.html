@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/navbar.css}" type="text/css">
+</head>
+<style>
+    body, h1, h2, h3, p, ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #222222;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav {
+        background-color: #444444;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #444444;
+        border-radius: 5px;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #007bff;
+        border-radius: 25px 0 0 25px;
+        outline: none;
+        width: 300px;
+        box-sizing: border-box;
+    }
+
+    .search-bar button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    .search-bar button:hover {
+        background-color: #0056b3;
+    }
+
+    .user-menu {
+        margin-left: auto;
+    }
+
+    .user-menu li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .user-menu li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .user-menu li a:hover {
+        background-color: #444444;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+<header>
+    <nav th:fragment="navbar (searchQuery)">
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/categories">Категории</a></li>
+            <li><a href="/about">О нас</a></li>
+        </ul>
+        <div class="search-bar">
+            <form action="/search" method="get">
+                <input id="search-input" name="text" type="text" th:value="${searchQuery}" th:placeholder="${searchQuery != null ? searchQuery : 'Поиск...'}">
+                <button type="submit">Искать</button>
+            </form>
+        </div>
+        <ul class="user-menu">
+            <li><a href="/account">Аккаунт</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>
